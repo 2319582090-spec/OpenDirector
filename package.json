@@ -1,0 +1,18 @@
+{
+  "name": "opendirector",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server/index.js",
+    "start": "NODE_ENV=production node src/server/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.271",
+    "@remotion/renderer": "^4.0.271",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.271"
+  }
+}

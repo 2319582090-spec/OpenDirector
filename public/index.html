@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenDirector · AI Director Workbench</title>
+    <script>
+      if (window.location.protocol === "file:") {
+        window.location.replace("http://127.0.0.1:8123/" + window.location.search);
+      }
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Open-source AI Director Agent</span>
+          <h1>OpenDirector</h1>
+        </div>
+        <div class="provider-strip" id="provider-strip"></div>
+      </header>
+
+      <main class="workspace">
+        <section class="compose-panel">
+          <form id="generate-form" class="compose-form">
+            <label class="field">
+              <span>项目想法</span>
+              <textarea
+                name="idea"
+                rows="7"
+                placeholder="例如：一个雨夜便利店里，两个多年未见的人因为一枚旧打火机重新相遇，最后停在玻璃反光里的第三个人影。"
+                required
+              ></textarea>
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span>风格</span>
+                <select name="style">
+                  <option>电影感</option>
+                  <option>悬疑</option>
+                  <option>国风</option>
+                  <option>赛博</option>
+                  <option>品牌片</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>片长</span>
+                <select name="durationSeconds">
+                  <option value="30">30 秒</option>
+                  <option value="60" selected>60 秒</option>
+                  <option value="90">90 秒</option>
+                </select>
+              </label>
+            </div>
+            <input type="hidden" name="runMode" value="plan" />
+            <button class="primary-button" id="submit-button" type="submit">生成剧本和可视化步骤</button>
+            <p class="form-note">先拆成剧本、角色、场景、道具和分镜；确认后再交给生成工具制作素材和成片。</p>
+          </form>
+
+          <section class="jobs-panel">
+            <div class="section-head">
+              <h2>最近任务</h2>
+              <button class="text-button" data-action="refresh" type="button">刷新</button>
+            </div>
+            <div id="jobs-list" class="jobs-list"></div>
+          </section>
+        </section>
+
+        <section class="result-panel" id="result-panel"></section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

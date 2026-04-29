@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenDirector · Static Preview</title>
+    <meta
+      name="description"
+      content="OpenDirector 的静态预览页，不依赖服务端即可查看当前网页设计和信息结构。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#hero">
+          <span class="brand-mark"></span>
+          <span class="brand-text">OpenDirector</span>
+        </a>
+        <nav class="topnav">
+          <a href="#studio">工作台</a>
+          <a href="#providers">Provider</a>
+          <a href="#jobs">任务</a>
+          <a href="#preview">预览</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">静态预览页</p>
+            <h1>先看网页感觉，再接通真实生成链路。</h1>
+            <p class="hero-text">
+              这是当前 Web MVP 的独立预览版本。它不依赖服务端，不依赖模型接口，只用来先确认首页、工作台、任务状态和结果页的整体方向。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#studio">看工作台</a>
+              <a class="button secondary" href="#preview">看结果布局</a>
+            </div>
+            <div class="hero-metrics">
+              <article>
+                <span>当前形态</span>
+                <strong>静态网页预览</strong>
+              </article>
+              <article>
+                <span>下一步</span>
+                <strong>接入真实任务流</strong>
+              </article>
+              <article>
+                <span>正式导出</span>
+                <strong>Remotion + FFmpeg</strong>
+              </article>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="floating-card summary-card">
+              <span class="card-label">产品一句话</span>
+              <h2>Open-source AI director workbench</h2>
+              <p>把一句想法压成一个有脚本、有旁白、有镜头、有导出的网页闭环。</p>
+            </div>
+            <div class="floating-card pipeline-card">
+              <span class="card-label">主链路</span>
+              <ol>
+                <li>输入 idea 与风格</li>
+                <li>生成结构化故事</li>
+                <li>生成旁白与镜头</li>
+                <li>导出成片与日志</li>
+              </ol>
+            </div>
+            <div class="floating-card note-card">
+              <span class="card-label">当前状态</span>
+              <p>UI 已成形，真实视频生成还在等 provider key 和依赖安装。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="studio" id="studio">
+          <div class="section-heading">
+            <p class="eyebrow">工作台</p>
+            <h2>一句话发起一个样片任务</h2>
+            <p>第一版网页重点不是复杂时间线，而是把导演意图稳定送进任务流水线。</p>
+          </div>
+
+          <div class="studio-grid">
+            <div class="control-panel">
+              <label class="field">
+                <span>项目想法</span>
+                <textarea rows="6" readonly>做一支 60 秒中文悬疑预告片，两个角色，雨夜便利店，结尾停在一个非常有记忆点的反打镜头。</textarea>
+              </label>
+
+              <div class="field-row">
+                <div class="field compact passive">
+                  <span>风格</span>
+                  <strong>悬疑 / 电影感</strong>
+                </div>
+                <div class="field compact passive">
+                  <span>时长</span>
+                  <strong>60 秒</strong>
+                </div>
+              </div>
+
+              <div class="field-row">
+                <div class="field compact passive">
+                  <span>视频主链</span>
+                  <strong>阿里百炼 / 通义万相</strong>
+                </div>
+                <div class="field compact passive">
+                  <span>视频备用</span>
+                  <strong>Runway API</strong>
+                </div>
+              </div>
+
+              <a class="submit-button" href="#jobs">当前先看任务状态布局</a>
+            </div>
+
+            <div class="brief-panel">
+              <div class="brief-block">
+                <span class="card-label">为什么这样做</span>
+                <h3>先把生成任务产品化</h3>
+                <p>我们先不做聊天式交互，也不做复杂编辑器，先把“一个 idea 变成一个异步任务”做稳。</p>
+              </div>
+              <div class="brief-block">
+                <span class="card-label">当前策略</span>
+                <ul>
+                  <li>脚本层：OpenRouter + GPT-5.4</li>
+                  <li>视频主链：DashScope / Wan</li>
+                  <li>视频备用：Runway</li>
+                  <li>配音：ElevenLabs，缺失时系统语音兜底</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="providers" id="providers">
+          <div class="section-heading">
+            <p class="eyebrow">Provider</p>
+            <h2>当前能力与缺口</h2>
+          </div>
+          <div class="provider-grid">
+            <article class="provider-card">
+              <div class="provider-head">
+                <div>
+                  <span class="card-label">openrouter</span>
+                  <h3>脚本 / 提示词</h3>
+                </div>
+                <span class="provider-tag state-ready">ready</span>
+              </div>
+              <p>已接入 GPT-5.4，可用于故事结构、镜头提示词和旁白文案生成。</p>
+            </article>
+            <article class="provider-card">
+              <div class="provider-head">
+                <div>
+                  <span class="card-label">dashscope</span>
+                  <h3>视频主链</h3>
+                </div>
+                <span class="provider-tag state-missing">missing</span>
+              </div>
+              <p>还缺 `DASHSCOPE_API_KEY`，这是最优先补的真实视频生成能力。</p>
+            </article>
+            <article class="provider-card">
+              <div class="provider-head">
+                <div>
+                  <span class="card-label">runway</span>
+                  <h3>视频备用</h3>
+                </div>
+                <span class="provider-tag state-missing">missing</span>
+              </div>
+              <p>还缺 `RUNWAY_API_KEY`，用于主链失败时的备用视频 provider。</p>
+            </article>
+            <article class="provider-card">
+              <div class="provider-head">
+                <div>
+                  <span class="card-label">elevenlabs</span>
+                  <h3>高质量旁白</h3>
+                </div>
+                <span class="provider-tag state-fallback">fallback</span>
+              </div>
+              <p>暂时没有 `ELEVENLABS_API_KEY`，可以先用系统语音兜底跑流程。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="jobs" id="jobs">
+          <div class="section-heading">
+            <p class="eyebrow">任务状态</p>
+            <h2>任务式工作流，而不是一个超长请求</h2>
+          </div>
+
+          <div class="jobs-grid">
+            <div class="current-job-panel">
+              <div class="job-header">
+                <div>
+                  <span class="card-label">当前任务</span>
+                  <h3>雨夜便利店悬疑预告片</h3>
+                </div>
+                <span class="status-pill state-fallback">Running</span>
+              </div>
+
+              <div class="progress-track">
+                <span style="width: 58%"></span>
+              </div>
+              <div class="progress-copy">
+                <strong>正在生成镜头 3 / 5</strong>
+                <span>58%</span>
+              </div>
+
+              <div class="scene-grid">
+                <article class="scene-card">
+                  <span class="card-label">openrouter + wan</span>
+                  <h4>镜头 1：便利店外景</h4>
+                  <p>雨夜街灯、便利店玻璃反光、男主犹豫着站在门口。</p>
+                  <div class="scene-meta">
+                    <span>12 秒</span>
+                    <span>主链视频</span>
+                  </div>
+                </article>
+                <article class="scene-card">
+                  <span class="card-label">runway fallback</span>
+                  <h4>镜头 2：女主转身</h4>
+                  <p>回头反应镜头，强调人物表情和玻璃上映出的第二个人影。</p>
+                  <div class="scene-meta">
+                    <span>10 秒</span>
+                    <span>备用视频</span>
+                  </div>
+                </article>
+                <article class="scene-card">
+                  <span class="card-label">remotion placeholder</span>
+                  <h4>镜头 3：尾镜头标题卡</h4>
+                  <p>当前还是占位卡，但布局已经预留给最终真实镜头输出。</p>
+                  <div class="scene-meta">
+                    <span>8 秒</span>
+                    <span>流程兜底</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <aside class="jobs-sidebar">
+              <div class="sidebar-head">
+                <span class="card-label">最近任务</span>
+                <span class="inline-note">静态示例</span>
+              </div>
+              <div class="job-list">
+                <article class="job-item active">
+                  <span class="job-meta">2026-04-22 10:00</span>
+                  <h4>雨夜便利店悬疑预告片</h4>
+                  <p>正在生成镜头和旁白混合稿</p>
+                  <small>
+                    <span>Running</span>
+                    <span>60 秒</span>
+                    <span>悬疑</span>
+                  </small>
+                </article>
+                <article class="job-item">
+                  <span class="job-meta">2026-04-22 09:20</span>
+                  <h4>国风神话概念片</h4>
+                  <p>结构化剧本已完成，等待视频主链</p>
+                  <small>
+                    <span>Queued</span>
+                    <span>90 秒</span>
+                    <span>国风</span>
+                  </small>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="preview" id="preview">
+          <div class="section-heading">
+            <p class="eyebrow">预览与日志</p>
+            <h2>结果页和错误反馈放在同一个网页里</h2>
+          </div>
+
+          <div class="preview-grid">
+            <div class="video-panel">
+              <div class="panel-head">
+                <span class="card-label">最终导出</span>
+                <span class="inline-note">静态预览暂无真实视频</span>
+              </div>
+              <p class="video-placeholder">
+                这里最终会直接播放成片。等真实 provider 接通后，用户不需要离开网页就能预览结果、下载文件并回看中间镜头。
+              </p>
+            </div>
+
+            <div class="log-panel">
+              <div class="panel-head">
+                <span class="card-label">运行日志</span>
+                <span class="inline-note">脚本：GPT-5.4 · 视频：待接通</span>
+              </div>
+              <div class="log-list">
+                <article class="log-entry">
+                  <strong>script</strong>
+                  <p>结构化故事生成完成，已拆成 5 个镜头并产出统一视觉风格提示词。</p>
+                  <span class="inline-note">2026-04-22 09:58:12</span>
+                </article>
+                <article class="log-entry">
+                  <strong>audio</strong>
+                  <p>ElevenLabs 未配置，当前任务自动降级为系统语音进行预演。</p>
+                  <span class="inline-note">2026-04-22 09:58:45</span>
+                </article>
+                <article class="log-entry">
+                  <strong>video</strong>
+                  <p>视频主链尚未接入真实 key，镜头 3 暂时使用 Remotion 占位卡兜底。</p>
+                  <span class="inline-note">2026-04-22 09:59:27</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

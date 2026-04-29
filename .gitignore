@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+.env.local
+storage/generated/*
+storage/jobs/*.json
+!storage/generated/.gitkeep
+!storage/jobs/.gitkeep
