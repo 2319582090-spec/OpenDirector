@@ -1,12 +1,41 @@
 # OpenDirector
 
-OpenDirector is a free and open-source AI director workbench.
+OpenDirector is a free and open-source AI director Agent ecosystem.
 
-It helps creators turn one idea into a controllable filmmaking workflow: script, characters, locations, props, shots, voiceover, music, editing, and final preview.
+It helps creators turn one idea into a controllable filmmaking workflow: script, characters, locations, props, shots, voiceover, music, editing, director orchestration, and final preview.
 
 **一个想法，自由选择，导演 Agent。**
 
 This project was started by director Shaoqi Shao. The goal is simple: make AI filmmaking tools open, understandable, and useful for everyone, not locked behind a closed product.
+
+## Start Here / 最容易点开的入口
+
+- [OpenDirector Ecosystem](ECOSYSTEM.md): 四大核心能力、创作步骤、可集成软件与模型。
+- [Contributing Guide](CONTRIBUTING.md): 如何参与共建、接入模型、贡献工作流和提交 PR。
+
+## Four Core Capabilities / 四大核心能力
+
+OpenDirector is built around four ecosystem capabilities. They are the core areas we invite the community to build together.
+
+| Capability | What it does |
+| --- | --- |
+| **Hermes 自我进化记忆** | 学习用户偏好、创作风格、成功案例，提炼可复用技能，主动记忆并优化决策。 |
+| **Manus 全局调度** | 智能分解复杂任务，高效编排多模态 AI 模型，优化资源分配，实现全流程自动化。 |
+| **OpenClaw 平台功能系统** | 提供统一的 Agent 运行环境、工具与模型管理、多模态用户交互接口。 |
+| **Claude Code 自定义开发** | 允许开发者针对特定需求，编写高级剪辑逻辑、智能配乐算法、多语言配音适配等定制化功能。 |
+
+## Creative Pipeline / 创作步骤
+
+OpenDirector should let each creator start from one idea and freely choose the model or tool for every step. The following matrix is the current ecosystem direction and integration map for contributors.
+
+| Step | Models and tools |
+| --- | --- |
+| 剧本创作 | ChatGPT, Gemini, DeepSeek, 豆包 |
+| 文生视频 | Sora 2, Seedance 2.0, 即梦 |
+| 配乐 | Suno, Lyria 3, MiniMax Music |
+| 配音 | ElevenLabs, Resemble AI, Uberduck |
+| 剪辑 | LTX Desktop, ChatCut, Medeo |
+| 导演 Agent | GPT-5.5, Claude 4.7, Gemini, Manus |
 
 ## Why OpenDirector
 
@@ -46,17 +75,6 @@ OpenDirector 的口号是：
 - **Manus global orchestration / Manus 全局调度**: break down complex creative tasks, coordinate multimodal AI models, optimize resources, and automate the full idea-to-film process.
 - **OpenClaw platform system / OpenClaw 平台功能系统**: provide a unified Agent runtime, tool and model management, and multimodal user interaction interfaces.
 - **Claude Code custom development / Claude Code 自定义开发**: let developers build advanced editing logic, intelligent music scoring, multilingual voice adaptation, and other specialized creative functions.
-
-## Model and Tool Matrix
-
-| Workflow area | Example models and tools |
-| --- | --- |
-| 剧本创作 | ChatGPT, Gemini, DeepSeek, 豆包 |
-| 文生视频 | Sora 2, Seedance 2.0, 即梦 |
-| 配乐 | Suno, Lyria 3, MiniMax Music |
-| 配音 | ElevenLabs, Resemble AI, Uberduck |
-| 剪辑 | Medeo, ChatCut, LTX Desktop |
-| 导演 Agent | GPT-5.5, Claude 3, Gemini, Manus |
 
 ## Current Prototype
 
@@ -110,6 +128,8 @@ storage/generated/    Local generated assets, ignored by git
 storage/jobs/         Local job metadata, ignored by git
 docs/                 Research, workflow notes, provider setup, implementation plans
 tests/                Node tests
+ECOSYSTEM.md          Public ecosystem map and integration targets
+CONTRIBUTING.md       Public co-building guide
 ```
 
 ## Community Invitation

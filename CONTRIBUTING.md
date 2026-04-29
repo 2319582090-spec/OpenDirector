@@ -4,6 +4,8 @@ Thank you for helping build OpenDirector.
 
 OpenDirector is an open-source AI director Agent ecosystem. We welcome developers, directors, writers, editors, designers, sound creators, music creators, AI model builders, local model maintainers, tool makers, and anyone who cares about open creative tools.
 
+Start with [OpenDirector Ecosystem](ECOSYSTEM.md) for the four core capabilities and integration map.
+
 ## How You Can Help
 
 - Improve the web workbench experience.
@@ -47,8 +49,8 @@ We welcome integrations with cloud models, local models, open-source models, and
 | 文生视频 | Sora 2, Seedance 2.0, 即梦 |
 | 配乐 | Suno, Lyria 3, MiniMax Music |
 | 配音 | ElevenLabs, Resemble AI, Uberduck |
-| 剪辑 | Medeo, ChatCut, LTX Desktop |
-| 导演 Agent | GPT-5.5, Claude 3, Gemini, Manus |
+| 剪辑 | LTX Desktop, ChatCut, Medeo |
+| 导演 Agent | GPT-5.5, Claude 4.7, Gemini, Manus |
 
 These are ecosystem directions and possible integrations. A contribution does not need to support every model. A focused adapter, workflow, or plugin is enough.
 
