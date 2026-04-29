@@ -18,6 +18,10 @@ Describe the painful part of the workflow.
 
 Examples: story, characters, locations, props, shots, rhythm, voiceover, music, references, continuity, review points.
 
+## Can this become part of the ecosystem?
+
+Could this workflow become memory, orchestration, a plugin, a model integration, a local model adapter, an editing algorithm, a music rule, a voice rule, or a reusable director formula?
+
 ## Any examples or references?
 
 Add notes, links, screenshots, or a rough director formula.
